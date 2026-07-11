@@ -1,0 +1,134 @@
+{
+  "feature_ablation": {
+    "RGB only (36-d)": {
+      "hho_ensemble_acc": 0.9186206896551724,
+      "hho_ensemble_f1": 0.8994689198329494,
+      "equal_weight_acc": 0.9006896551724138,
+      "equal_weight_f1": 0.8743870592105106,
+      "best_single_model": "Extra trees",
+      "best_single_acc": 0.9241379310344827,
+      "best_single_f1": 0.906617527660893,
+      "hho_weights": {
+        "Logistic regression": 5.980337846458102e-06,
+        "Random forest": 0.2092703015634891,
+        "Extra trees": 0.790717737760818,
+        "K-nearest neighbors": 5.980337846458102e-06
+      },
+      "per_model_acc": {
+        "Logistic regression": 0.8248275862068966,
+        "Random forest": 0.9103448275862069,
+        "Extra trees": 0.9241379310344827,
+        "K-nearest neighbors": 0.856551724137931
+      },
+      "per_model_f1": {
+        "Logistic regression": 0.7858349400965706,
+        "Random forest": 0.8885850204066683,
+        "Extra trees": 0.906617527660893,
+        "K-nearest neighbors": 0.8298308186622874
+      }
+    },
+    "RGB+HSV (72-d)": {
+      "hho_ensemble_acc": 0.9462068965517242,
+      "hho_ensemble_f1": 0.9319649498320244,
+      "equal_weight_acc": 0.9172413793103448,
+      "equal_weight_f1": 0.8955558299564165,
+      "best_single_model": "Extra trees",
+      "best_single_acc": 0.9475862068965517,
+      "best_single_f1": 0.9330915611400953,
+      "hho_weights": {
+        "Logistic regression": 8.104398682034959e-06,
+        "Random forest": 8.104398682034959e-06,
+        "Extra trees": 0.9999756868039539,
+        "K-nearest neighbors": 8.104398682034959e-06
+      },
+      "per_model_acc": {
+        "Logistic regression": 0.8675862068965517,
+        "Random forest": 0.9310344827586207,
+        "Extra trees": 0.9475862068965517,
+        "K-nearest neighbors": 0.8662068965517241
+      },
+      "per_model_f1": {
+        "Logistic regression": 0.8391499033686384,
+        "Random forest": 0.9122113332270105,
+        "Extra trees": 0.9330915611400953,
+        "K-nearest neighbors": 0.8465995430435732
+      }
+    },
+    "RGB+HSV+Lab, no ripeness idx (108-d)": {
+      "hho_ensemble_acc": 0.9489655172413793,
+      "hho_ensemble_f1": 0.935242720334437,
+      "equal_weight_acc": 0.9324137931034483,
+      "equal_weight_f1": 0.9145124902426581,
+      "best_single_model": "Extra trees",
+      "best_single_acc": 0.9462068965517242,
+      "best_single_f1": 0.9320417033602459,
+      "hho_weights": {
+        "Logistic regression": 0.021263203006083965,
+        "Random forest": 6.459393988154378e-06,
+        "Extra trees": 0.9787238782059396,
+        "K-nearest neighbors": 6.459393988154378e-06
+      },
+      "per_model_acc": {
+        "Logistic regression": 0.88,
+        "Random forest": 0.9351724137931035,
+        "Extra trees": 0.9462068965517242,
+        "K-nearest neighbors": 0.886896551724138
+      },
+      "per_model_f1": {
+        "Logistic regression": 0.8546971284847399,
+        "Random forest": 0.9133462605445399,
+        "Extra trees": 0.9320417033602459,
+        "K-nearest neighbors": 0.8669162025861818
+      }
+    },
+    "Full: RGB+HSV+Lab+ripeness idx (125-d)": {
+      "hho_ensemble_acc": 0.9462068965517242,
+      "hho_ensemble_f1": 0.9290087010259165,
+      "equal_weight_acc": 0.9324137931034483,
+      "equal_weight_f1": 0.9115503688918304,
+      "best_single_model": "Extra trees",
+      "best_single_acc": 0.9434482758620689,
+      "best_single_f1": 0.9266256048337339,
+      "hho_weights": {
+        "Logistic regression": 0.05898477401366504,
+        "Random forest": 0.06123440951002557,
+        "Extra trees": 0.872106362070193,
+        "K-nearest neighbors": 0.007674454406116445
+      },
+      "per_model_acc": {
+        "Logistic regression": 0.8951724137931034,
+        "Random forest": 0.9337931034482758,
+        "Extra trees": 0.9434482758620689,
+        "K-nearest neighbors": 0.896551724137931
+      },
+      "per_model_f1": {
+        "Logistic regression": 0.8717049058668807,
+        "Random forest": 0.9119049119424589,
+        "Extra trees": 0.9266256048337339,
+        "K-nearest neighbors": 0.8726808460472983
+      }
+    }
+  },
+  "ensemble_ablation": {
+    "Full ensemble (none dropped)": {
+      "acc": 0.9462068965517242,
+      "f1": 0.9290087010259165
+    },
+    "Without Logistic regression": {
+      "acc": 0.9434482758620689,
+      "f1": 0.9266256048337339
+    },
+    "Without Random forest": {
+      "acc": 0.9393103448275862,
+      "f1": 0.9216507477562266
+    },
+    "Without Extra trees": {
+      "acc": 0.9282758620689655,
+      "f1": 0.9093008941266991
+    },
+    "Without K-nearest neighbors": {
+      "acc": 0.9393103448275862,
+      "f1": 0.9216507477562266
+    }
+  }
+}

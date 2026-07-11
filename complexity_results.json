@@ -1,0 +1,36 @@
+{
+  "feature_extraction_ms_per_image": 11.925245523452759,
+  "per_model": {
+    "Logistic regression": {
+      "train_seconds": 0.23865008354187012,
+      "inference_ms_per_image": 0.00048249343345905176,
+      "total_ms_per_image_incl_features": 11.925728016886218,
+      "n_params_or_nodes": 504,
+      "complexity": "O(m) per sample (m=125 features); training O(n*m*iters)"
+    },
+    "Random forest": {
+      "train_seconds": 3.2151269912719727,
+      "inference_ms_per_image": 0.06015915706239897,
+      "total_ms_per_image_incl_features": 11.985404680515158,
+      "n_params_or_nodes": 245256,
+      "complexity": "O(T*log n) per sample (T=300 trees); training O(T*n*m*log n)"
+    },
+    "Extra trees": {
+      "train_seconds": 0.4639863967895508,
+      "inference_ms_per_image": 0.05261210737557247,
+      "total_ms_per_image_incl_features": 11.977857630828332,
+      "n_params_or_nodes": 639580,
+      "complexity": "O(T*log n) per sample (T=300 trees); training O(T*n*m) (no per-split sort)"
+    },
+    "K-nearest neighbors": {
+      "train_seconds": 0.0005900859832763672,
+      "inference_ms_per_image": 0.015682417770911908,
+      "total_ms_per_image_incl_features": 11.94092794122367,
+      "n_params_or_nodes": null,
+      "complexity": "O(n*m) per sample (brute-force distance to all n=6501 train points)"
+    }
+  },
+  "ensemble_train_seconds": 3.91835355758667,
+  "ensemble_inference_ms_per_image": 12.054181699095102,
+  "ensemble_throughput_img_per_s": 82.95876277317682
+}
